@@ -18,13 +18,29 @@ def selection_sort( arr ):
            
 
     return arr
-# print(selection_sort(arr))
 
-
+# Swap Function 
+def swapPositions(arr, pos1, pos2):  
+    arr[pos1], arr[pos2] = arr[pos2], arr[pos1] 
+    return arr
 # # TO-DO:  implement the Bubble Sort function below
-# def bubble_sort( arr ):
+def bubble_sort( arr ):
 
-#     return arr
+# Pseudocode 
+# for all elements of list
+#       if list[i] > list[i+1]
+#          swap(list[i], list[i+1])
+#       end if
+#    end for
+   
+#    return list
+    for i in range(0,len(arr)-1):
+      
+        if arr[i]>arr[i+1]:
+           swapPositions(arr,i,i+1)
+        #    Recursion 
+           bubble_sort(arr)
+    return arr
 
 
 # # STRETCH: implement the Count Sort function below
